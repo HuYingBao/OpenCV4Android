@@ -12,7 +12,10 @@ cmake_minimum_required(VERSION 3.4.1)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 set(libs "${CMAKE_SOURCE_DIR}/src/main/jniLibs")
+# import cmake file of vlfeat
+include(src/main/cpp/vl/vlfeat.cmake)
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/include)
+
 
 #--------------------------------------------------- import ---------------------------------------------------#
 add_library(libopencv_java3 SHARED IMPORTED )
@@ -99,7 +102,10 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              # Associated headers in the same location as their source
              # file are automatically included.
-             src/main/cpp/DetectionBasedTracker_jni.cpp)
+             src/main/cpp/DetectionBasedTracker_jni.cpp
+             src/main/cpp/live_demo.cpp
+             # import sourcecode of vlfeat
+             ${VLFEAT_SRC})
 
 find_library( # Sets the name of the path variable.
               log-lib

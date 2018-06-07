@@ -1,8 +1,6 @@
 package com.jiangdg.opencv4android.imgproc;
 
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
-import android.graphics.ImageFormat;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
@@ -21,7 +19,6 @@ import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.utils.Converters;
 
 import java.io.File;
 
